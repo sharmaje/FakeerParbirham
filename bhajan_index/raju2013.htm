@@ -1,0 +1,556 @@
+<html>
+<script language="javascript">
+
+<!--
+// Text for the marquee on the bottom bar
+var current = 0
+var x = 0
+var speed = 100
+var speed2 = 2000
+
+function initArray(n) {
+  this.length = n;
+  for (var i =1; i <= n; i++) {
+    this[i] = ' '
+  }
+}
+
+typ = new initArray(9)
+typ[0]="SADA SHIV!!!"
+typ[1]="Welcome to FakeerParbirham.com.."
+typ[2]="A Virtual Yatra to VERIJHAP DHAM.."
+typ[3]="Presented By SHARMA JE LINKS.."
+typ[4]="This Website is Composed by VIJAY SHARMA & Dr NEEL KANTH SHARMA.."
+typ[5]="Please Listen.."
+typ[6]="Your comments and suggestions are valuable to us.."
+typ[7]="They help us improve the content."
+typ[8]="Please spare a few minutes to send in your suggestions & comments on how we can improve.. "
+typ[9]="Contact us on SHARMAJELINKS@GMAIL.COM! "
+function typewrite() {
+
+var m = typ[current]
+window.status = m.substring(0, x++) + "_"
+if (x == m.length + 1) {
+x = 0
+current++
+if (current > typ.length - 1) {
+current = 0
+}
+setTimeout("typewrite()", speed2)
+}
+else {
+setTimeout("typewrite()", speed)
+}
+}
+typewrite()
+//-->
+</script>
+
+<title>&quot;Ayo Melo Wari&quot; Bhagat Raju, Bhagat Naresh, Bhagat Dileep | FAKEER 
+PARBIRHAM.com</title>
+<script language="javaScript">
+<!--
+// copyright © jorik zwart 2003
+// Script featured on JavaScript Kit (http://javascriptkit.com)
+// change the menuItems array with your options and set the urls to link to
+// use addMenuItem("Text to show", "Url To Link To"); to make an item
+// use addMenuItem("Text", Url", "Img To Show"); to make an item with an image
+// use addMenuItem(); to indicate a separator bar
+// you can use html tags in the text, eg, <i>, <b> or <u>
+// images used should be 16x16 transparent gifs
+///////////////////////////////////////////////////////////////////////////////////
+ menuItems = new Array();
+ menuItemNum = 0;
+
+ function addMenuItem(text, url, img){
+  if(img) menuItems[menuItemNum] = new Array(text, url, img);
+  else if(text) menuItems[menuItemNum] = new Array(text, url);
+  else menuItems[menuItemNum] = new Array();
+  menuItemNum++;
+ }
+
+ menuWidth = 305; //menu width
+ menuHeight = 100; //menu height
+ menuDelay = 50; //delay before menu appears
+ menuSpeed = 8; //speed which menu appears (lower=faster)
+ menuOffset = 2; //offset of menu from mouse pointer
+
+addMenuItem("Copy Right & All Rights are Reserved");
+addMenuItem("");
+addMenuItem("Thanks for Visting the Site");
+addMenuItem("");
+addMenuItem("Sharma Je Links");
+addMenuItem("");
+addMenuItem("Composed by  VIJAY SHARMA & Dr NEEL KANTH SHARMA");
+
+ ///////////////////////////////////////////////////////////////////////////////
+ // do not edit the code below, it is required for the menu to work correctly
+ ///////////////////////////////////////////////////////////////////////////////
+
+ if(window.navigator.appName == "Microsoft Internet Explorer" && window.navigator.appVersion.substring(window.navigator.appVersion.indexOf("MSIE") + 5, window.navigator.appVersion.indexOf("MSIE") + 8) >= 5.5)
+  isIe = 1;
+ else
+  isIe = 0;
+
+ if(isIe){
+  menuContent = '<table id="rightMenu" width="0" height="0" cellspacing="0" cellpadding="0" style="font:menu;color:menutext;"><tr height="1"><td style="background:threedlightshadow" colspan="4"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedhighlight" colspan="2"></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="10"><td style="background:threedlightshadow"></td><td style="background:threedhighlight"></td><td style="background:threedface"><table cellspacing="0" cellpadding="0" nowrap style="font:menu;color:menutext;cursor:default;">';
+  for(m=0;m<menuItems.length;m++){
+   if(menuItems[m][0] && menuItems[m][2])
+    menuContent += '<tr height="17" onMouseOver="this.style.background=\'highlight\';this.style.color=\'highlighttext\';" onMouseOut="this.style.background=\'threedface\';this.style.color=\'menutext\';" onClick="parent.window.location.href=\'' + menuItems[m][1] + '\'"><td style="background:threedface" width="1" nowrap></td><td width="21" nowrap><img src="' + menuItems[m][2] + '"></td><td nowrap>' + menuItems[m][0] + '</td><td width="21" nowrap></td><td style="background:threedface" width="1" nowrap></td></tr>';
+   else if(menuItems[m][0])
+    menuContent += '<tr height="17" onMouseOver="this.style.background=\'highlight\';this.style.color=\'highlighttext\';" onMouseOut="this.style.background=\'threedface\';this.style.color=\'menutext\';" onClick="parent.window.location.href=\'' + menuItems[m][1] + '\'"><td style="background:threedface" width="1" nowrap></td><td width="21" nowrap></td><td nowrap>' + menuItems[m][0] + '</td><td width="21" nowrap></td><td style="background:threedface" width="1" nowrap></td></tr>';
+   else
+    menuContent += '<tr><td colspan="5" height="4"></td></tr><tr><td colspan="5"><table cellspacing="0"><tr><td width="2" height="1"></td><td width="0" height="1" style="background:threedshadow"></td><td width="2" height="1"></td></tr><tr><td width="2" height="1"></td><td width="100%" height="1" style="background:threedhighlight"></td><td width="2" height="1"></td></tr></table></td></tr><tr><td colspan="5" height="3"></td></tr>';
+  }
+  menuContent += '</table></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedhighlight"></td><td style="background:threedface"></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedshadow" colspan="3"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threeddarkshadow" colspan="5"></td></tr></table>';
+
+  menuPopup = window.createPopup();
+  menuPopup.document.body.innerHTML = menuContent;
+ }
+
+ function showMenu(){
+  menuXPos = event.clientX + menuOffset;
+  menuYPos = event.clientY + menuOffset;
+
+  menuXIncrement = menuWidth / menuSpeed;
+  menuYIncrement = menuHeight / menuSpeed;
+
+  menuTimer = setTimeout("openMenu(0,0)", menuDelay);
+
+  return false;
+ }
+
+ function openMenu(height, width){
+  iHeight = height;
+  iWidth = width;
+
+  menuPopup.show(menuXPos, menuYPos, iWidth, iHeight, document.body);
+
+  if(iHeight < menuHeight)
+   menuTimer = setTimeout("openMenu(iHeight + menuYIncrement, iWidth + menuXIncrement)", 1);
+  else
+   clearTimeout(menuTimer);
+ }
+
+
+ if(isIe) document.oncontextmenu = showMenu;
+
+
+//-->
+</script>
+
+<style>
+
+body {
+
+margin: 0px
+
+}
+
+
+
+TD {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #000000
+
+}
+
+
+
+
+
+A:link {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #89b155
+
+}
+
+
+
+A:visited {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #89b155
+
+}
+
+
+
+A:hover {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #Red
+
+}
+
+
+
+INPUT
+
+{
+
+	BORDER-RIGHT: #89b155
+ 1px solid;
+
+	BORDER-TOP: #89b155
+ 1px solid;
+
+	FONT-SIZE: 10px;
+
+	BORDER-LEFT: #89b155
+ 1px solid;
+
+	COLOR: #6D8DAD;
+
+	BORDER-BOTTOM: #89b155 1px solid;
+
+	FONT-FAMILY: Verdana;
+
+	BACKGROUND-COLOR: #ffffff
+
+}
+
+
+
+.ttl
+
+{
+
+	FONT-SIZE: 10px;
+
+	text-align: center;
+
+	FONT-WEIGHT: bold;
+
+	COLOR: #FFFFFF;
+
+	FONT-FAMILY: Verdana
+
+}
+
+
+
+.arr
+
+{
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	background-color: #89b155
+
+
+
+}
+
+
+
+.tdbg { background-color: #89b155 }
+
+.tdbg1 { background-	color: #89b155; color: #FFFFFF; font-weight: bold }
+
+.tdbg2 { background-color: #89b155 }
+
+td {FONT-SIZE: 8pt; FONT-FAMILY: Verdana}
+
+a {	FONT-SIZE: 8pt; COLOR: #000000; TEXT-DECORATION: none}
+
+a:hover { color: 	color: #89b155 }
+
+
+
+.thumbnail:link {FONT-SIZE: 7.5pt; COLOR: #ff3300}
+
+.thumbnail:visited {FONT-SIZE: 7.5pt; COLOR: #ff3300}
+
+
+
+</style><style type="text/css">
+<!--
+.unnamed1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #FFFFFF; text-decoration: none}
+a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #FFFFFF; text-decoration: none}
+-->
+</style>
+</head>
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>&#1601;&#1602;&#1610;&#1585; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1580;&#1575; &#1580;&#1575;&#1661;&#1610; &#1670;&#1574;&#1608; &#1587;&#1583;&#1575;&#1588;&#1616;&#1608;</title>
+</head>
+
+<body>
+
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="237" id="AutoNumber48">
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      <p align="center"><span lang="ar-sa">
+      <font face="MB Sindhi Web" color="#0000FF" style="font-size: 30pt">&#1601;&#1602;&#1610;&#1585; 
+      &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1580;&#1575; &#1580;&#1575;&#1661;&#1610; &#1670;&#1574;&#1608; &#1587;&#1583;&#1575;&#1588;&#1616;&#1608;</font></span></td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      <img border="0" src="../images/spacer_v.gif" width="1" height="15"></td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+&nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="497" id="AutoNumber56" height="92">
+  <tr>
+    <td width="497" height="13" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+    <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="421" id="AutoNumber58">
+      <tr>
+        <td width="374" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="525" id="AutoNumber59" height="135">
+          <tr>
+            <td width="96%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000" height="45">
+            <p align="center"><span lang="ar-sa">
+            <font face="MB Sindhi Web" style="font-size: 22pt" color="#0000FF">
+            &#1580;&#1608;&#1578; &#1580;&#1575;&#1715;&#1575;&#1574;&#1610;</font></span></td>
+            <td width="110%" rowspan="3" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000" height="135">
+            <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100" id="AutoNumber60">
+              <tr>
+                              <td style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+                  <img border="0" src="../images/gul2011.jpg" width="100" height="133"></td>
+                            </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td width="96%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000" height="45">
+            <p align="center"><span lang="ar-sa">
+            <font face="MB Sindhi Web" style="font-size: 16pt">&#1664;&#1715;&#1578; &#1585;&#1575;&#1580;&#1608; &#1580;&#1610; &#1570;&#1608;&#1575;&#1586; 
+            &#1790; &#1679;&#1575;&#1679;&#1610; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1580;&#1575; &#1580;&#1587;&#1689;&#1575; </font></span></td>
+          </tr>
+          <tr>
+            <td width="96%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000" height="45">
+            <p align="center"><span lang="ar-sa">
+                        <font face="MB Sindhi Web" style="font-size: 16pt">&#1588;&#1610;&#1608;&#1575; 
+            &#1790; &#1601;&#1602;&#1610;&#1585; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1588;&#1610;&#1608;&#1575; &#1605;&#1606;&#1674;&#1604;&#1610; &#1661;&#1606;&#1674;&#1608;&#1576;&#1575;&#1711;&#1608; &#1789; &#1661;&#1606;&#1674;&#1608;&#1570;&#1583;&#1605;</font></span></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="497" height="13" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"></td>
+  </tr>
+  <tr>
+    <td width="497" height="113" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+    <div align="center">
+      <center>
+    <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="525" id="AutoNumber57">
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        <p align="center"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1570;&#1574;&#1610;&#1606; &#1607;&#1610; &#1578;&#1610;&#1585;&#1610; &#1580;&#1575;&#1661;&#1610; &#1576;&#1689;&#1610; 
+        &#1583;&#1608;&#1585; &#1583;&#1608;&#1585; &#1587;&#1610;</font><font face="MB Sindhi Web" size="4"> </font></span>
+        </td>
+      </tr>
+      <tr>
+        <td width="62%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        <p align="center">Aye Hain Tare Jati Bari Dor Dor Se</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><font face="MB Sindhi Web">
+        <span style="font-size: 16pt" lang="ar-sa">&#1605;&#1604;&#1610; &#1605;&#1610;&#1711;&#1607;&#1607; &#1605;&#1575;&#1578;&#1575; &#1705;&#1610; &#1608;&#1575;&#1676;&#1575;&#1574;&#1610;</span></font></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Mile Meegh Mata khe Wadhaye</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1575;&#1668; &#1570;&#1610;&#1608; &#1605;&#1610;&#1604;&#1608; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; 
+        &#1575;&#1608;&#1578;&#1575;&#1585; &#1580;&#1608; </font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Aj Ayo Melo Parbirham Avtar jo</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1587;&#1583;&#1575;&#1588;&#1616;&#1608; &#1580;&#1610; &#1606;&#1575;&#1605; &#1580;&#1610; &#1676;&#1606;&#1610;</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">SadaShiv je nam je </td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1668;&#1575;&#1585; &#1608;&#1575;&#1585;&#1575; &#1580;&#1608;&#1578; &#1580;&#1715;&#1575;&#1574;&#1610; &#1706;&#1575; 
+        &#1605;&#1658;&#1689;&#1610;</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Jar Wara Jot Jagaye Ka Mithri</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1578;&#1610;&#1585;&#1610; &#1604;&#1610;&#1604;&#1575; &#1607;&#1610; &#1662;&#1585;&#1664;&#1608; 
+        &#1605;&#1607;&#1575;&#1606; &#1585;&#1610; </font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Tere Leela hai Pirbhoo Mahan Re Mare 
+        Bhole </td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1608;&#1610;&#1689;&#1607;&#1610;&#1580;&#1662; &#1608;&#1575;&#1585;&#1575; &#1583;&#1610;&#1608; 
+        &#1583;&#1604;&#1575;&#1585;&#1575;</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Verijhap Waro Dev Dularo</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1575;&#1668; &#1578;&#1663; &#1570; &#1662;&#1606;&#1670;&#1605; &#1580;&#1610;</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Aj Tith aa Pancham ji</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1605;&#1585;&#1588;&#1583; &#1706;&#1575; &#1605;&#1610;&#1604;&#1575;</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Murshid Ka Meela</td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="38%" rowspan="2" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        <p dir="rtl"><span lang="ar-sa">
+        <font face="MB Sindhi Web" style="font-size: 16pt">&#1575;&#1670;&#1608; &#1605;&#1610;&#1604;&#1608; &#1587;&#1664; &#1605;&#1604;&#1607;&#1575;&#1610;&#1608;&#1606; 
+        (&#1607;&#1608;&#1580;&#1605;&#1575;&#1604;&#1608;)</font></span></td>
+      </tr>
+      <tr>
+        <td width="62%" align="center" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">Hoo Jamalo</td>
+      </tr>
+      <tr>
+        <td width="38%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+        <td width="62%" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      </tr>
+    </table>
+      </center>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="497" height="1" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000"></td>
+  </tr>
+</table>
+      </td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      <img border="0" src="../images/spacer_v.gif" width="1" height="15"></td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        &nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        <div align="center">
+          <center>
+        <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="525" id="AutoNumber55">
+          <tr>
+            <td width="499" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+            <p dir="rtl" align="center">
+                                                                              <align="center">
+            <span lang="ar-sa"><font size="5" face="MB Sindhi Web">&#1662;&#1606;&#1607;&#1606;&#1580;&#1575; &#1602;&#1610;&#1605;&#1578;&#1610; 
+            &#1585;&#1575;&#1610;&#1575; &#1575;&#1587;&#1575;&#1606; &#1705;&#1610; &#1590;&#1585;&#1608;&#1585; &#1679;&#1610;&#1608; &#1578;&#1607; &#1580;&#1574;&#1610;&#1606; &#1575;&#1587;&#1575;&#1606; &#1607;&#1606; &#1608;&#1610;&#1576; &#1587;&#1575;&#1574;&#1661; &#1705;&#1610; &#1608;&#1676;&#1610;&#1706; &#1576;&#1607;&#1578;&#1585; &#1606;&#1605;&#1608;&#1606;&#1610; 
+            &#1578;&#1608;&#1607;&#1575;&#1606; &#1575;&#1715;&#1610;&#1575;&#1606; &#1570;&#1723;&#1610; &#1587;&#1711;&#1607;&#1608;&#1606;. </font></span></td>
+          </tr>
+        </table>
+          </center>
+        </div>
+        </td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">
+        &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+      <td width="508" style="font-size: 8pt; font-family: Verdana; text-decoration: none; color: #000000">&nbsp;</td>
+    </tr>
+    </table>
+      
+</body>
+
+</html>
