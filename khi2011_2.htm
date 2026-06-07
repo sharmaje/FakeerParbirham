@@ -1,0 +1,646 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+
+<!--
+function openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<SCRIPT language=javascript>
+
+<!--
+// Text for the marquee on the bottom bar
+var current = 0
+var x = 0
+var speed = 100
+var speed2 = 2000
+
+function initArray(n) {
+  this.length = n;
+  for (var i =1; i <= n; i++) {
+    this[i] = ' '
+  }
+}
+
+typ = new initArray(9)
+typ[0]="SADA SHIV!!!"
+typ[1]="Welcome to FakeerParbirham.com.."
+typ[2]="A Virtual Yatra to VERIJHAP DHAM.."
+typ[3]="Presented By SHARMA JE LINKS.."
+typ[4]="This Website is Composed by VIJAY SHARMA & Dr NEEL KANTH SHARMA.."
+typ[5]="Please Listen.."
+typ[6]="Your comments and suggestions are valuable to us.."
+typ[7]="They help us improve the content."
+typ[8]="Please spare a few minutes to send in your suggestions & comments on how we can improve.. "
+typ[9]="Contact us on SHARMAJELINKS@GMAIL.COM! "
+function typewrite() {
+
+var m = typ[current]
+window.status = m.substring(0, x++) + "_"
+if (x == m.length + 1) {
+x = 0
+current++
+if (current > typ.length - 1) {
+current = 0
+}
+setTimeout("typewrite()", speed2)
+}
+else {
+setTimeout("typewrite()", speed)
+}
+}
+typewrite()
+//-->
+</SCRIPT>
+
+<title>Watch live Videos of Satsung | FakeerParbirham.com</title>
+<script language="javaScript">
+<!--
+// copyright © jorik zwart 2003
+// Script featured on JavaScript Kit (http://javascriptkit.com)
+// change the menuItems array with your options and set the urls to link to
+// use addMenuItem("Text to show", "Url To Link To"); to make an item
+// use addMenuItem("Text", Url", "Img To Show"); to make an item with an image
+// use addMenuItem(); to indicate a separator bar
+// you can use html tags in the text, eg, <i>, <b> or <u>
+// images used should be 16x16 transparent gifs
+///////////////////////////////////////////////////////////////////////////////////
+ menuItems = new Array();
+ menuItemNum = 0;
+
+ function addMenuItem(text, url, img){
+  if(img) menuItems[menuItemNum] = new Array(text, url, img);
+  else if(text) menuItems[menuItemNum] = new Array(text, url);
+  else menuItems[menuItemNum] = new Array();
+  menuItemNum++;
+ }
+
+ menuWidth = 305; //menu width
+ menuHeight = 100; //menu height
+ menuDelay = 50; //delay before menu appears
+ menuSpeed = 8; //speed which menu appears (lower=faster)
+ menuOffset = 2; //offset of menu from mouse pointer
+
+addMenuItem("Copy Right & All Rights are Reserved");
+addMenuItem("");
+addMenuItem("Thanks for Visting the Site");
+addMenuItem("");
+addMenuItem("Sharma Je Links");
+addMenuItem("");
+addMenuItem("Composed by  VIJAY SHARMA & Dr NEEL KANTH SHARMA");
+
+ ///////////////////////////////////////////////////////////////////////////////
+ // do not edit the code below, it is required for the menu to work correctly
+ ///////////////////////////////////////////////////////////////////////////////
+
+ if(window.navigator.appName == "Microsoft Internet Explorer" && window.navigator.appVersion.substring(window.navigator.appVersion.indexOf("MSIE") + 5, window.navigator.appVersion.indexOf("MSIE") + 8) >= 5.5)
+  isIe = 1;
+ else
+  isIe = 0;
+
+ if(isIe){
+  menuContent = '<table id="rightMenu" width="0" height="0" cellspacing="0" cellpadding="0" style="font:menu;color:menutext;"><tr height="1"><td style="background:threedlightshadow" colspan="4"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedhighlight" colspan="2"></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="10"><td style="background:threedlightshadow"></td><td style="background:threedhighlight"></td><td style="background:threedface"><table cellspacing="0" cellpadding="0" nowrap style="font:menu;color:menutext;cursor:default;">';
+  for(m=0;m<menuItems.length;m++){
+   if(menuItems[m][0] && menuItems[m][2])
+    menuContent += '<tr height="17" onMouseOver="this.style.background=\'highlight\';this.style.color=\'highlighttext\';" onMouseOut="this.style.background=\'threedface\';this.style.color=\'menutext\';" onClick="parent.window.location.href=\'' + menuItems[m][1] + '\'"><td style="background:threedface" width="1" nowrap></td><td width="21" nowrap><img src="' + menuItems[m][2] + '"></td><td nowrap>' + menuItems[m][0] + '</td><td width="21" nowrap></td><td style="background:threedface" width="1" nowrap></td></tr>';
+   else if(menuItems[m][0])
+    menuContent += '<tr height="17" onMouseOver="this.style.background=\'highlight\';this.style.color=\'highlighttext\';" onMouseOut="this.style.background=\'threedface\';this.style.color=\'menutext\';" onClick="parent.window.location.href=\'' + menuItems[m][1] + '\'"><td style="background:threedface" width="1" nowrap></td><td width="21" nowrap></td><td nowrap>' + menuItems[m][0] + '</td><td width="21" nowrap></td><td style="background:threedface" width="1" nowrap></td></tr>';
+   else
+    menuContent += '<tr><td colspan="5" height="4"></td></tr><tr><td colspan="5"><table cellspacing="0"><tr><td width="2" height="1"></td><td width="0" height="1" style="background:threedshadow"></td><td width="2" height="1"></td></tr><tr><td width="2" height="1"></td><td width="100%" height="1" style="background:threedhighlight"></td><td width="2" height="1"></td></tr></table></td></tr><tr><td colspan="5" height="3"></td></tr>';
+  }
+  menuContent += '</table></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedhighlight"></td><td style="background:threedface"></td><td style="background:threedshadow"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threedlightshadow"></td><td style="background:threedshadow" colspan="3"></td><td style="background:threeddarkshadow"></td></tr><tr height="1"><td style="background:threeddarkshadow" colspan="5"></td></tr></table>';
+
+  menuPopup = window.createPopup();
+  menuPopup.document.body.innerHTML = menuContent;
+ }
+
+ function showMenu(){
+  menuXPos = event.clientX + menuOffset;
+  menuYPos = event.clientY + menuOffset;
+
+  menuXIncrement = menuWidth / menuSpeed;
+  menuYIncrement = menuHeight / menuSpeed;
+
+  menuTimer = setTimeout("openMenu(0,0)", menuDelay);
+
+  return false;
+ }
+
+ function openMenu(height, width){
+  iHeight = height;
+  iWidth = width;
+
+  menuPopup.show(menuXPos, menuYPos, iWidth, iHeight, document.body);
+
+  if(iHeight < menuHeight)
+   menuTimer = setTimeout("openMenu(iHeight + menuYIncrement, iWidth + menuXIncrement)", 1);
+  else
+   clearTimeout(menuTimer);
+ }
+
+
+ if(isIe) document.oncontextmenu = showMenu;
+
+
+//-->
+</script>
+
+<style>
+
+body {
+
+margin: 0px
+
+}
+
+
+
+TD {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #000000
+
+}
+
+
+
+
+
+A:link {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #89b155
+
+}
+
+
+
+A:visited {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #89b155
+
+}
+
+
+
+A:hover {
+
+	text-decoration: none;
+
+	font-size: 10px;
+
+	font-family: Verdana;
+
+	color: #Red
+
+}
+
+
+
+INPUT
+
+{
+
+	BORDER-RIGHT: #89b155
+ 1px solid;
+
+	BORDER-TOP: #89b155
+ 1px solid;
+
+	FONT-SIZE: 10px;
+
+	BORDER-LEFT: #89b155
+ 1px solid;
+
+	COLOR: #6D8DAD;
+
+	BORDER-BOTTOM: #89b155 1px solid;
+
+	FONT-FAMILY: Verdana;
+
+	BACKGROUND-COLOR: #ffffff
+
+}
+
+
+
+.ttl
+
+{
+
+	FONT-SIZE: 10px;
+
+	text-align: center;
+
+	FONT-WEIGHT: bold;
+
+	COLOR: #FFFFFF;
+
+	FONT-FAMILY: Verdana
+
+}
+
+
+
+.arr
+
+{
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	background-color: #89b155
+
+
+
+}
+
+
+
+.tdbg { background-color: #89b155 }
+
+.tdbg1 { background-	color: #89b155; color: #FFFFFF; font-weight: bold }
+
+.tdbg2 { background-color: #89b155 }
+
+td {FONT-SIZE: 8pt; FONT-FAMILY: Verdana}
+
+a {	FONT-SIZE: 8pt; COLOR: #000000; TEXT-DECORATION: none}
+
+a:hover { color: 	color: #89b155 }
+
+
+
+.thumbnail:link {FONT-SIZE: 7.5pt; COLOR: #ff3300}
+
+.thumbnail:visited {FONT-SIZE: 7.5pt; COLOR: #ff3300}
+
+
+
+</style><style type="text/css">
+<!--
+.unnamed1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #FFFFFF; text-decoration: none}
+a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #FFFFFF; text-decoration: none}
+-->
+</style>
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+</head>
+<body background="images/BG.JPG">
+
+<center>
+
+<table height="1" width="144" border="0" cellspacing="0" cellpadding="0">
+
+<tr><td height="117" width="752" valign="top" align="left" colspan="3">
+
+<table border="0" cellspacing="0" width="100" id="AutoNumber45" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr>
+    <td width="33%">
+    <img border="0" src="images/ttll.jpg" width="180" height="125"></td>
+    <td width="33%">
+    <img border="0" src="images/ttlm.jpg" width="415" height="125"></td>
+    <td width="34%">
+    <img border="0" src="images/ttlr.jpg" width="180" height="125"></td>
+  </tr>
+</table>
+  </td></tr>
+
+<tr>
+
+<td height="1" width="122" align="left" valign="top">
+
+<div align="center">
+  <center>
+  <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="70" id="AutoNumber46" height="964">
+    <tr>
+      <td height="40"><a href="main_s.htm">
+      <img border="0" src="images/home.gif" width="120" height="40"></a></td>
+    </tr>
+    <tr>
+      <td height="13"><a href="mata_pewand.htm">
+      <img border="0" src="images/mpew.gif" width="120" height="40"></a></td>
+    </tr>
+    <tr>
+      <td height="36">
+      <a href="http://www.facebook.com/group.php?gid=126074587431771&ref=ts">
+      <img border="0" src="images/fb.jpg" width="120" height="36"></a></td>
+    </tr>
+    <tr>
+      <td height="144">
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70" id="AutoNumber49">
+          <tr>
+            <td><a href="SINDHI%20FONT%20(FakeerParbirham.com).rar">
+            <img border="0" src="images/download.gif" width="120" height="40"></a></td>
+          </tr>
+          <tr>
+            <td>
+            <p dir="rtl" align="center"><font size="4" face="MB Lateefi">&#1607;&#1610; &#1608;&#1610;&#1576; 
+            &#1587;&#1575;&#1574;&#1661; &#1587;&#1658;&#1610; &#1606;&#1605;&#1608;&#1606;&#1610; &#1679;&#1587;&#1723; &#1604;&#1575;&#1789; &#1605;&#1663;&#1610; &#1679;&#1606;&#1604; &#1601;&#1608;&#1606;&#1661; &#1674;&#1575;&#1608;&#1606; &#1604;&#1608;&#1674; &#1706;&#1585;&#1610;&#1608;</font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td height="200">
+      <img border="0" src="images/guru_add.jpg" width="120" height="200"></td>
+    </tr>
+    <tr>
+      <td height="200">
+      <img border="0" src="images/sant_Add.jpg" width="120" height="200"></td>
+    </tr>
+    <tr>
+      <td background="images/bar.jpg" height="13">
+      <p align="center">Advertisements</td>
+    </tr>
+    <tr>
+      <td height="311">
+      <img border="0" src="images/addlft.gif" width="120" height="240"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td>
+
+<center>
+
+<td height="1" width="878" align="left" valign="top">
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="534" id="AutoNumber48">
+    <tr>
+      <td width="17">
+      &nbsp;</td>
+      <td width="508">
+      &nbsp;</td>
+      <td width="14">
+      &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">
+      <img border="0" src="images/spacer1.gif" width="15" height="1"></td>
+      <td width="508">
+      <p align="center"><span lang="ar-sa">
+      <font size="5" face="MB Sindhi Web" color="#0000FF">&#1601;&#1602;&#1610;&#1585; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1580;&#1575; &#1580;&#1575;&#1661;&#1610; 
+      &#1670;&#1574;&#1608; &#1587;&#1583;&#1575;&#1588;&#1616;&#1608;</font></span></td>
+      <td width="14">
+      <img border="0" src="images/spacer1.gif" width="15" height="1"></td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+      <img border="0" src="images/spacer_v.gif" width="1" height="15"></td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+      <div align="center">
+        <center>
+        <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="500" id="AutoNumber51">
+          <tr>
+            <td>
+            <p dir="rtl" align="center">
+            <font face="MB Sindhi Web" color="#0000FF" style="font-size: 20pt">
+            <span lang="ar-sa">
+            &#1679;&#1575;&#1679;&#1610; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605; &#1580;&#1610; &#1606;&#1575;&#1569;&#1612; &#1587;&#1578;&#1587;&#1606;&#1711;  </span>
+            <span lang="fa">&#1706;&#1585;&#1575;&#1670;&#1610;</span><span lang="ar-sa"> 
+            2011 &#1662;&#1575;&#1585;&#1661; </span>2</font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      </td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+      <img border="0" src="images/spacer_v.gif" width="1" height="15"></td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+<p align="center"><object width="480" height="390"><param name="movie" value="http://www.youtube.com/v/7S7mQqsTcB4?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+  <embed src="http://www.youtube.com/v/7S7mQqsTcB4?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="480" height="390" allowscriptaccess="always" allowfullscreen="true"></embed></object></td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+      <img border="0" src="images/spacer_v.gif" width="1" height="15"></td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">
+        <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="503" id="AutoNumber55">
+          <tr>
+            <td width="499">
+            <p dir="rtl" align="center">
+                                                                              <align="center">
+            <span lang="ar-sa"><font size="5" face="MB Sindhi Web">&#1662;&#1606;&#1607;&#1606;&#1580;&#1575; &#1602;&#1610;&#1605;&#1578;&#1610; 
+            &#1585;&#1575;&#1610;&#1575; &#1575;&#1587;&#1575;&#1606; &#1705;&#1610; &#1590;&#1585;&#1608;&#1585; &#1679;&#1610;&#1608; &#1578;&#1607; &#1580;&#1574;&#1610;&#1606; &#1575;&#1587;&#1575;&#1606; &#1607;&#1606; &#1608;&#1610;&#1576; &#1587;&#1575;&#1574;&#1661; &#1705;&#1610; &#1608;&#1676;&#1610;&#1706; &#1576;&#1607;&#1578;&#1585; &#1606;&#1605;&#1608;&#1606;&#1610; 
+            &#1578;&#1608;&#1607;&#1575;&#1606; &#1575;&#1715;&#1610;&#1575;&#1606; &#1570;&#1723;&#1610; &#1587;&#1711;&#1607;&#1608;&#1606;. </font></span></td>
+          </tr>
+        </table>
+        </td>
+      <td width="14">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="17">&nbsp;</td>
+      <td width="508">&nbsp;</td>
+      <td width="14">&nbsp;</td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td>
+
+<td height="1" width="70" align="left" valign="top">
+
+<div align="center">
+  <center>
+  <table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF6600" width="70" id="AutoNumber47">
+    <tr>
+      <td>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="111" id="AutoNumber50">
+          <tr>
+                  <td width="109" dir="rtl">
+                  <p align="center" dir="rtl">
+                  <font face="MB Sindhi Web" size="4">
+                  <font color="#000000" face="MB Sindhi Web" style="font-size: 16pt">
+                  <span style="font-size: 16pt">
+                  <a href="parbirham.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">
+                  &#1679;&#1575;&#1679;&#1608; &#1662;&#1575;&#1585;&#1576;&#1585;&#1607;&#1605;</font></a></span></font></a></font></td>
+                </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font size="4" face="MB Sindhi Web">
+                  <span style="font-size: 16pt">
+                  <font face="MB Sindhi Web" color="#000000">
+                  <a href="jarsahab.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">
+                  &#1668;&#1575;&#1585;&#1589;&#1575;&#1581;&#1576;</font></a></font></span></a></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font size="4" face="MB Sindhi Web">
+                  <span style="font-size: 16pt">
+                  <a href="charhi_sb.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">&#1671;&#1689;&#1610; &#1589;&#1575;&#1581;&#1576;</font></a></span></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><span lang="ar-sa">
+                  <font face="MB Sindhi Web" style="font-size: 16pt" color="#000000">
+                  <span style="font-size: 16pt">
+                  <a href="chmtkr.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">&#1670;&#1605;&#1578;&#1706;&#1575;&#1585;</font></a></span></font></span><font face="MB Sindhi Web"><span style="font-size: 16pt"></a></span></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font face="MB Sindhi Web" size="4">
+                  <span style="font-size: 16pt;">
+                  <a href="melo.htm">
+                  <font style="font-size: 16pt;" color="#000000" face="MB Sindhi Web">
+                  &#1679;&#1575;&#1679;&#1610; &#1580;&#1608; &#1605;&#1610;&#1604;&#1608;</font></a></span></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font size="4" face="MB Sindhi Web">
+                  <span style="font-size: 16pt">
+                  <a href="bhajans.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">
+                  &#1664;&#1668;&#1606; &#1605;&#1575;&#1604;&#1575;</font></a></span></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><span lang="ar-sa">
+                  <a href="videos.htm">
+                  <font face="MB Sindhi Web" style="font-size: 16pt" color="#000000">
+                  &#1608;&#1674;&#1610;&#1608; &#1664;&#1668;&#1606;</font></a></span></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><span lang="ar-sa">
+                  <a href="pics.orignol.htm">
+                  <font face="MB Sindhi Web" style="font-size: 16pt" color="#000000">
+                  &#1605;&#1610;&#1605;&#1576;&#1585; &#1586;&#1608;&#1606;</font></a></span></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font size="4" face="MB Sindhi Web">
+                  <span style="font-size: 16pt">
+                  <a href="wallpapers.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">&#1608;&#1575;&#1604; 
+                  &#1662;&#1610;&#1662;&#1585;</font></a></span></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center">
+                  <font face="MB Sindhi Web" style="font-size: 16pt" color="#000000">
+                  <a href="contact.htm"><span style="font-size: 16pt">
+                  <font color="#000000" face="MB Sindhi Web">&#1575;&#1587;&#1575;&#1606; &#1587;&#1575;&#1606;
+                  </font></span>
+                  <font color="#000000" face="MB Sindhi Web"><span style="font-size: 16pt" lang="ar-sa">
+                  &#1585;&#1575;&#1576;&#1591;&#1608;</span></font></a></font></td>
+          </tr>
+          <tr>
+            <td width="109">
+                  <p align="center"><font size="4" face="MB Sindhi Web">
+                  <span style="font-size: 16pt">
+                  <a href="guestbook.htm">
+                  <font face="MB Sindhi Web" color="#000000" style="font-size: 16pt">
+                  &#1711;&#1610;&#1587;&#1661; &#1576;&#1615;&#1706;</font></a></span></font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td background="images/bar.jpg">
+      <p align="center">Special Thanks to</td>
+    </tr>
+    <tr>
+      <td>
+      <img border="0" src="images/rtan.gif" width="111" height="74"></td>
+    </tr>
+    <tr>
+      <td>
+      <img border="0" src="images/komv.gif" width="111" height="117"></td>
+    </tr>
+    <tr>
+      <td background="images/bar.jpg">
+      <p align="center">Advertisements</td>
+    </tr>
+    <tr>
+      <td><a href="http://Parbirham.OurToolbar.com/exe">
+      <img border="0" src="images/toolbar.jpg" width="111" height="234"></a></td>
+    </tr>
+    <tr>
+      <td>
+      <img border="0" src="images/addrgt.gif" width="111" height="222"></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td>
+
+  </tr>
+
+</table>
+
+<center>
+<table height="6" width="773" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="6" width="803">
+      <table height="51" width="773" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" width="771" align="center" background="images/bar.jpg"><font style="FONT-SIZE: 8pt" face="Verdana">
+          Copyright © <b>SharmaJeLinks</b>&nbsp; All Rights are Reserved @ <b> Sharma Je
+            Links</b> </font></td>
+        </tr>
+        <tr>
+          <td height="8" width="771" align="center" background="images/bar.jpg">
+            Best Viewed at 800 X 600 Resolutions</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</center>
